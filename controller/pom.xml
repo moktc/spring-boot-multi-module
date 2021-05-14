@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>controller</artifactId>
+	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
@@ -17,5 +18,27 @@
 			<artifactId>domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.purnima.jain</groupId>
+			<artifactId>service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.purnima.jain</groupId>
+			<artifactId>repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<finalName>${artifactId}</finalName>
+		<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+				<skip>true</skip>
+			</configuration>
+		</plugin>
+		</plugins>
+	</build>
 </project>
